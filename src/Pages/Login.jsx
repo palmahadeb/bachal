@@ -1,39 +1,35 @@
 import React from 'react'
 import {Grid,TextField,Button} from '@mui/material';
-import registration from "../assets/registrationimg.webp"
+import loginimg from "../assets/loginimg.webp"
+import login from "../assets/googlelogin.webp"
 import Headingregi from '../component/Headingregi';
 
-const Registration = () => {
+const Login = () => {
   return (
     <Grid container spacing={2}>
 
         <Grid item xs={6}>
          <div className='regicontainer'>
-           <Headingregi className="regiheading" title= "Get started with easily register"/>
+           <Headingregi className="regiheading" title= "Login to your account!"/>
 
-           <p className='regipara'>Free register and you can enjoy it</p>
-
+           <img className='logimg' src={login}/>
             <div className='textinput'>
                 <TextField id="outlined-basic" label="Email address" variant="outlined" />             
             </div> 
-
-            <div className='textinput'>
-                <TextField id="outlined-basic" label="Full name" variant="outlined" />
-           </div>
 
            <div className='textinput'>
                <TextField id="outlined-basic" label="Password" variant="outlined" />
            </div>
 
-           <div className='buttonregi'>
-           <Button variant="contained">Sign up</Button>
+           <div className='buttonlog'>
+           <Button variant="contained">Login to Continue</Button>
            </div>
 
          </div>
         </Grid>
 
         <Grid item xs={6}>
-         <img className='regiimg' src={registration}/>
+         <img className='loginimg' src={loginimg}/>
         </Grid>
 
     </Grid>
@@ -41,4 +37,4 @@ const Registration = () => {
   )
 }
 
-export default Registration
+export default Login
